@@ -12,12 +12,12 @@
 // BODY
 body {
   @include onDesktop {
-    background-image: url('/assets/img/bg-desktop.png');
+    background-image: url('./assets/img/bg-desktop.png');
     background-position: right bottom;
   }
 
   @include onMobile {
-    background-image: url('/assets/img/bg-mobile.png');
+    background-image: url('./assets/img/bg-mobile.png');
     background-size: cover;
   }
 
@@ -164,7 +164,6 @@ body {
             transform: translate(-2px, 0);
           }
         }
-
       }
 
       &-range {
