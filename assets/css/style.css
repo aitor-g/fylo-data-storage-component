@@ -21,13 +21,13 @@ body {
 }
 @media screen and (min-width: 960px) {
   body {
-    background-image: url("../assets/img/bg-desktop.png");
+    background-image: url("./assets/img/bg-desktop.png");
     background-position: right bottom;
   }
 }
 @media screen and (max-width: 959px) {
   body {
-    background-image: url("../assets/img/bg-mobile.png");
+    background-image: url("./assets/img/bg-mobile.png");
     background-size: cover;
   }
 }
