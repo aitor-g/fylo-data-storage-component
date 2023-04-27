@@ -1,0 +1,288 @@
+@use '../scss' as *;
+
+// RESETS
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// BODY
+body {
+  @include onDesktop {
+    background-image: url('/assets/img/bg-desktop.png');
+    background-position: right bottom;
+  }
+
+  @include onMobile {
+    background-image: url('/assets/img/bg-mobile.png');
+    background-size: cover;
+  }
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: $very-dark-blue;
+  color: $pale-blue;
+  height: 100vh;
+  @include colCenter;
+  font-family: $raleway;
+  font-size: $body-font;
+}
+
+// DESKTOP
+@include onDesktop {
+  .component {
+    display: flex;
+    align-items: end;
+
+    .menu {
+      width: 350px;
+      margin-right: 2rem;
+      padding: 2.3rem 2.5rem;
+
+      &__logo {
+        img {}
+      }
+
+      &__buttons {
+        &-document {
+          img {}
+        }
+
+        &-folder {
+          img {}
+        }
+
+        &-upload {
+          img {}
+        }
+      }
+    }
+
+    .progress-bar {
+      padding: 2.5rem;
+      width: 540px;
+
+      &__description {
+        &-used {}
+      }
+
+      &__container {
+        &-track {
+          &_bar {
+            &-end {}
+          }
+        }
+
+        &-range {
+          &_value {}
+        }
+      }
+
+      &__float {
+        top: 0%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px 10px 0;
+
+        &::after {
+          visibility: visible;
+        }
+
+        &-left {}
+      }
+    }
+  }
+}
+
+// MOBILE
+@include onMobile {
+  .component {
+    .menu {
+      padding: 2.5rem;
+      width: 325px;
+      margin-bottom: 1rem;
+
+      &__logo {
+        img {}
+      }
+
+      &__buttons {
+        &-document {
+          img {}
+        }
+
+        &-folder {
+          img {}
+        }
+
+        &-upload {
+          img {}
+        }
+      }
+    }
+
+    .progress-bar {
+      padding: 2.2rem 2.5rem 2.5rem 2.8rem;
+      width: 325px;
+
+      &__description {
+        text-align: center;
+
+        &-used {}
+      }
+
+      &__container {
+        &-track {
+          &_bar {
+            &-end {}
+          }
+        }
+
+        &-range {
+          &_value {}
+        }
+      }
+
+      &__float {
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+
+        &::after {
+          visibility: hidden;
+        }
+
+        &-left {}
+      }
+    }
+  }
+}
+
+// GENERAL
+.component {
+  .menu {
+    background-color: $dark-blue;
+    height: 200px;
+    border-radius: 0.5rem 7rem 0.5rem 0.5rem;
+
+    &__logo {
+      margin-bottom: 2rem;
+
+      img {}
+    }
+
+    &__buttons {
+      display: flex;
+      align-items: center;
+
+      &-document {
+        @include menuButton;
+
+        img {}
+      }
+
+      &-folder {
+        @include menuButton;
+
+        img {}
+      }
+
+      &-upload {
+        @include menuButton;
+
+        img {}
+      }
+    }
+  }
+
+  .progress-bar {
+    background-color: $dark-blue;
+    border-radius: 0.5rem;
+    height: 160px;
+    position: relative;
+
+    &__description {
+      font-weight: 300;
+      margin-bottom: 1rem;
+
+      &-used {
+        font-weight: $bold;
+      }
+    }
+
+    &__container {
+      &-track {
+        background-color: rgba($very-dark-blue, 0.4);
+        height: 20px;
+        width: 100%;
+        padding-left: 2px;
+        border-radius: 5rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+
+        &_bar {
+          height: 14px;
+          width: 81%;
+          background-image: linear-gradient(to right, $coral, $pink);
+          border-radius: 5rem;
+          display: flex;
+          justify-content: right;
+          align-items: center;
+
+          &-end {
+            height: 10px;
+            width: 10px;
+            border-radius: 5rem;
+            background-color: white;
+            transform: translate(-2px, 0);
+          }
+        }
+
+      }
+
+      &-range {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        font-weight: $bold;
+
+        &_value {}
+      }
+    }
+
+    &__float {
+      position: absolute;
+      height: 70px;
+      width: 180px;
+      background-color: $white;
+      color: $very-dark-blue;
+      font-size: 2.5rem;
+      font-weight: $bold;
+      @include rowCenter;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 80%;
+        right: 0%;
+        transform: translate(0%, 0%);
+        background-color: $white;
+        height: 25px;
+        width: 25px;
+        transform: skewY(45deg);
+      }
+
+      &-left {
+        color: $grayish-blue;
+        font-size: 0.8rem;
+        font-weight: $bold;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "fylo-data-storage-component",
+  "version": "1.0.0",
+  "description": "A basic example of a storage bar of a fictional storage service called Fylo",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:assets/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.62.1"
+  }
+}

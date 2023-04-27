@@ -1,0 +1,35 @@
+@use './variables' as *;
+
+@mixin onDesktop {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+@mixin onMobile {
+  @media screen and (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin colCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin rowCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin menuButton {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+  background-color: $very-dark-blue;
+  border-radius: 10px;
+  @include colCenter;
+}
