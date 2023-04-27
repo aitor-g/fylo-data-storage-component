@@ -41,45 +41,11 @@ body {
       width: 350px;
       margin-right: 2rem;
       padding: 2.3rem 2.5rem;
-
-      &__logo {
-        img {}
-      }
-
-      &__buttons {
-        &-document {
-          img {}
-        }
-
-        &-folder {
-          img {}
-        }
-
-        &-upload {
-          img {}
-        }
-      }
     }
 
     .progress-bar {
       padding: 2.5rem;
       width: 540px;
-
-      &__description {
-        &-used {}
-      }
-
-      &__container {
-        &-track {
-          &_bar {
-            &-end {}
-          }
-        }
-
-        &-range {
-          &_value {}
-        }
-      }
 
       &__float {
         top: 0%;
@@ -90,8 +56,6 @@ body {
         &::after {
           visibility: visible;
         }
-
-        &-left {}
       }
     }
   }
@@ -104,24 +68,6 @@ body {
       padding: 2.5rem;
       width: 325px;
       margin-bottom: 1rem;
-
-      &__logo {
-        img {}
-      }
-
-      &__buttons {
-        &-document {
-          img {}
-        }
-
-        &-folder {
-          img {}
-        }
-
-        &-upload {
-          img {}
-        }
-      }
     }
 
     .progress-bar {
@@ -130,20 +76,6 @@ body {
 
       &__description {
         text-align: center;
-
-        &-used {}
-      }
-
-      &__container {
-        &-track {
-          &_bar {
-            &-end {}
-          }
-        }
-
-        &-range {
-          &_value {}
-        }
       }
 
       &__float {
@@ -155,8 +87,6 @@ body {
         &::after {
           visibility: hidden;
         }
-
-        &-left {}
       }
     }
   }
@@ -171,8 +101,6 @@ body {
 
     &__logo {
       margin-bottom: 2rem;
-
-      img {}
     }
 
     &__buttons {
@@ -181,20 +109,14 @@ body {
 
       &-document {
         @include menuButton;
-
-        img {}
       }
 
       &-folder {
         @include menuButton;
-
-        img {}
       }
 
       &-upload {
         @include menuButton;
-
-        img {}
       }
     }
   }
@@ -250,8 +172,6 @@ body {
         justify-content: space-between;
         font-size: 0.8rem;
         font-weight: $bold;
-
-        &_value {}
       }
     }
 
